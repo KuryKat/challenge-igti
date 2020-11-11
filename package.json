@@ -1,15 +1,13 @@
 {
   "name": "grade-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just a API",
   "main": "app.js",
   "scripts": {
-    "start": "node -r dotenv/config --experimental-modules app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -r dotenv/config app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "KuryKat",
+  "private": "true",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
