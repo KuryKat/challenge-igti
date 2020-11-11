@@ -12,6 +12,10 @@ const GradeList = () => {
         retrieveGrade()
     }, [])
 
+    const handleKeyup = (e) => {
+        if (e.key === 'Enter') findByName()
+    }
+
     const onChangeSearchName = (e) => {
         const searchName = e.target.value
         setSearchName(searchName)
@@ -71,6 +75,7 @@ const GradeList = () => {
                         placeholder="Search by name"
                         value={searchName}
                         onChange={onChangeSearchName}
+                        onKeyUp={handleKeyup}
                     />
                     <div className="input-group-append">
                         <button
@@ -91,7 +96,7 @@ const GradeList = () => {
                         grade.map((grade, index) => (
                             <li
                                 className={
-                                    'list-group-item ' +
+                                    'list-group-item clickable' +
                                     (index === currentIndex ? 'active' : '')
                                 }
                                 onClick={() => setActiveGrade(grade, index)}

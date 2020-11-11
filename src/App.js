@@ -12,7 +12,7 @@ function App() {
         <Router>
             <div>
                 <nav className="navbar navbar-expand navbar-dark bg-dark">
-                    <a href="/grade" className="navbar-brand">
+                    <a href="/" className="navbar-brand">
                         Aplicativo
                     </a>
                     <div className="navbar-nav mr-auto">

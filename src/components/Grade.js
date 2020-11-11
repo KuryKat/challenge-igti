@@ -35,7 +35,10 @@ const Grade = (props) => {
     const updateGrade = () => {
         GradeDataService.update(currentGrade.id, currentGrade)
             .then((response) => {
-                setMessage('The grade was updated successfully!')
+                setMessage('Updated successfully!!')
+                setTimeout(() => {
+                    props.history.push('/grade')
+                }, 1500)
             })
             .catch((e) => {
                 console.log(e)
@@ -118,7 +121,7 @@ const Grade = (props) => {
                     >
                         Update
                     </button>
-                    <p>{message}</p>
+                    <h3 style={{ color: 'green' }}>{message}</h3>
                 </div>
             ) : (
                 <div>
