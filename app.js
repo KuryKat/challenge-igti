@@ -9,6 +9,7 @@ import { db } from './models/index.js'
         await db.mongoose.connect(db.url, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useFindAndModify: true,
         })
         console.log('Connected to MongoDB!')
     } catch (error) {
@@ -24,7 +25,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(
     cors({
-        origin: 'http://localhost:3001',
+        origin: 'http://localhost:3000',
     })
 )
 
