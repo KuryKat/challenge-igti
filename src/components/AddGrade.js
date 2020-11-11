@@ -7,7 +7,7 @@ const AddGrade = () => {
         name: '',
         subject: '',
         type: '',
-        value: '',
+        value: 0,
     }
     const [grade, setGrade] = useState(initialGradeState)
     const [submitted, setSubmitted] = useState(false)
